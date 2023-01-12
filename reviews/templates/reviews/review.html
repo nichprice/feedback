@@ -7,10 +7,12 @@
     <title> Your Review </title>
 </head>
 <body>
-    <form>
+    <form action="user-review" method="POST">
+        {% comment %} security method built into django {% endcomment %}
+        {% csrf_token %} 
         <label for="username">Your name</label>
         <input id="username" name="username" type="text">
-        <button>Send</button>
+        <button type="submit">Send</button>
     </form>
 </body>
 </html>
